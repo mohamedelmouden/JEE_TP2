@@ -1,11 +1,11 @@
 package presentation;
-
+// message personnelle::0637
 import metier.IMetier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
+// message personnelle::0637
 @Configuration
 @ComponentScan(basePackages = {"dao", "metier"})
 public class Presentation2 {
@@ -13,13 +13,13 @@ public class Presentation2 {
         // Création du contexte Spring avec activation du profil "dev"
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.getEnvironment().setActiveProfiles("dev");  // Active le profil "dev"
-        context.register(Presentation2.class);
-        context.refresh();
-
+        context.register(Presentation2.class);// message personnelle::0637
+        context.refresh();// message personnelle::0637
+// message personnelle::0637
         // Récupération du bean IMetier
-        IMetier metier = context.getBean(IMetier.class);
-
+        IMetier metier = context.getBean(IMetier.class);// message personnelle::0637
+// message personnelle::0637
         // Exécution et affichage du résultat
-        System.out.println("Résultat = " + metier.calcul());
-    }
+        System.out.println("Résultat = " + metier.calcul());// message personnelle::0637
+    }// message personnelle::0637
 }
